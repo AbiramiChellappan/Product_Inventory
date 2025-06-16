@@ -108,3 +108,4 @@ C:\Users\u499155\VS code work\ProductsInventory\ProductsInventory.Tests\obj\Debu
 C:\Users\u499155\VS code work\ProductsInventory\ProductsInventory.Tests\obj\Debug\net9.0\ProductsInventory.Tests.pdb
 C:\Users\u499155\VS code work\ProductsInventory\ProductsInventory.Tests\obj\Debug\net9.0\ProductsInventory.Tests.genruntimeconfig.cache
 C:\Users\u499155\VS code work\ProductsInventory\ProductsInventory.Tests\obj\Debug\net9.0\ref\ProductsInventory.Tests.dll
+C:\Users\u499155\VS code work\ProductsInventory\ProductsInventory.Tests\obj\Debug\net9.0\ProductsInventory.Tests.sourcelink.json

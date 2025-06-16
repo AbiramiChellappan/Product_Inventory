@@ -1,9 +1,26 @@
-namespace ProductsInventory.Controllers;
+using Microsoft.AspNetCore.Mvc;
+using ProductsInventory.api.Models;
 
-public class ProductsController
+namespace ProductsInventory.api.Controllers;
+
+[ApiController]
+[Route("[api/controller]")]
+public class ProductsController : ControllerBase
 {
-    public int getCount()
+    // public int getCount()
+    // {
+    //     throw new NotImplementedException("Not yet implemented");
+    // }
+
+    [HttpPost]
+    public ActionResult CreateProduct([FromBody] Product product)
     {
-        throw new NotImplementedException("Not yet implemented");
+        return Ok(product);
+    }
+
+    [HttpGet("{id}")]
+    public ActionResult GetProduct(string id)
+    {
+        return Ok();
     }
 }

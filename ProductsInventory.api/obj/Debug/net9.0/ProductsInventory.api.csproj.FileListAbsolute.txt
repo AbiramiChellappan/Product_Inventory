@@ -26,3 +26,4 @@ C:\Users\u499155\VS code work\ProductsInventory\ProductsInventory.Api\obj\Debug\
 C:\Users\u499155\VS code work\ProductsInventory\ProductsInventory.Api\obj\Debug\net9.0\ProductsInventory.api.genruntimeconfig.cache
 C:\Users\u499155\VS code work\ProductsInventory\ProductsInventory.Api\obj\Debug\net9.0\ref\ProductsInventory.api.dll
 C:\Users\u499155\VS code work\ProductsInventory\ProductsInventory.Api\obj\Debug\net9.0\Products.4C012241.Up2Date
+C:\Users\u499155\VS code work\ProductsInventory\ProductsInventory.Api\obj\Debug\net9.0\ProductsInventory.Api.sourcelink.json
