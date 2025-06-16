@@ -15,7 +15,7 @@ public class ProductsControllerTests
 
         // Then
     }
-     [Fact]
+    [Fact]
     public void ProductGet_ShouldReturnOk()
     {
         // Given
