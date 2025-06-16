@@ -15,4 +15,15 @@ public class ProductsControllerTests
 
         // Then
     }
+     [Fact]
+    public void ProductGet_ShouldReturnOk()
+    {
+        // Given
+        ProductsController productsController = new ProductsController();
+        var res = productsController.GetProduct();
+        Assert.IsType<OkResult>(res);
+        // When
+
+        // Then
+    }
 }

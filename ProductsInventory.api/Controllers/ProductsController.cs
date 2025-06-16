@@ -18,8 +18,8 @@ public class ProductsController : ControllerBase
         return Ok(product);
     }
 
-    [HttpGet("{id}")]
-    public ActionResult GetProduct(string id)
+    [HttpGet]
+    public ActionResult GetProduct()
     {
         return Ok();
     }
