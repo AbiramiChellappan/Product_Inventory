@@ -4,7 +4,7 @@ using ProductsInventory.api.Services;
 namespace ProductsInventory.api.Controllers;
 
 [ApiController]
-[Route("[api/controller]")]
+[Route("api/[controller]")]
 public class ProductsController : ControllerBase
 {
     // public int getCount()
@@ -43,5 +43,17 @@ public class ProductsController : ControllerBase
     public ActionResult DeleteProduct(string id)
     {
         return Ok("Product deleted sucessfully");
+    }
+
+    public object GetProducts(string id)
+    {
+        Product product = _productsService.GetProduct(id);
+        return Ok(product);
+    }
+
+    public ActionResult GetAllProducts()
+    {
+        List<Product> product1 = _productsService.GetAllProducts();
+        return Ok(product1);
     }
 }

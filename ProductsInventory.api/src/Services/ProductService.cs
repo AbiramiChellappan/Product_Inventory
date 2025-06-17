@@ -22,7 +22,7 @@ public class ProductService : IProductService
         Product product = _productRepository.Get(id);
         if (product == null)
         {
-            throw new ResourceNotFound();
+            throw new ResourceNotFoundException();
         }
         _productRepository.Remove(id);
     }
@@ -37,7 +37,7 @@ public class ProductService : IProductService
         return _productRepository.Get(id);
     }
 
-    public Product UpdateProduct(String id, Product product)
+    public Product UpdateProduct(String id,  Product product)
     {
         Product dbproduct = _productRepository.Get(id);
         if (dbproduct == null)
@@ -51,5 +51,21 @@ public class ProductService : IProductService
 
         Product UpdatedProduct = _productRepository.Save(dbproduct);
         return UpdatedProduct;
+    }
+}
+
+[Serializable]
+internal class ResourceNotFoundException : Exception
+{
+    public ResourceNotFoundException()
+    {
+    }
+
+    public ResourceNotFoundException(string? message) : base(message)
+    {
+    }
+
+    public ResourceNotFoundException(string? message, Exception? innerException) : base(message, innerException)
+    {
     }
 }

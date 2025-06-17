@@ -4,24 +4,32 @@ namespace ProductsInventory.api.Repositories;
 
 public class ProductRepository : IProductRepository
 {
+    private List<Product> products;
+    public ProductRepository()
+    {
+        products = new List<Product>();
+    }
     public Product Get(string id)
     {
-        throw new NotImplementedException();
+        var product = products.Find(product => product.ID == id);
+        return product;
     }
 
     public List<Product> GetAll()
     {
-        throw new NotImplementedException();
+        return products;
     }
 
-    public Product Remove(string id)
+    public void Remove(string id)
     {
-        throw new NotImplementedException();
+        var product = products.Find(product => product.ID == id);
+        products.Remove(product);
     }
 
     public Product Save(Product product)
     {
-        throw new NotImplementedException();
+        products.Add(product);
+        return product;
     }
 
     public Product Update(Product product)

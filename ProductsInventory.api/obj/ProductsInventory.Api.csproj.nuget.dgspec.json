@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\u499155\\VS code work\\ProductsInventory\\ProductsInventory.Api\\ProductsInventory.Api.csproj": {}
+    "C:\\Users\\u499155\\VS code work\\ProductsInventory\\ProductsInventory.api\\ProductsInventory.api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\u499155\\VS code work\\ProductsInventory\\ProductsInventory.Api\\ProductsInventory.Api.csproj": {
+    "C:\\Users\\u499155\\VS code work\\ProductsInventory\\ProductsInventory.api\\ProductsInventory.api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\u499155\\VS code work\\ProductsInventory\\ProductsInventory.Api\\ProductsInventory.Api.csproj",
-        "projectName": "ProductsInventory.Api",
-        "projectPath": "C:\\Users\\u499155\\VS code work\\ProductsInventory\\ProductsInventory.Api\\ProductsInventory.Api.csproj",
+        "projectUniqueName": "C:\\Users\\u499155\\VS code work\\ProductsInventory\\ProductsInventory.api\\ProductsInventory.api.csproj",
+        "projectName": "ProductsInventory.api",
+        "projectPath": "C:\\Users\\u499155\\VS code work\\ProductsInventory\\ProductsInventory.api\\ProductsInventory.api.csproj",
         "packagesPath": "C:\\Users\\u499155\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\u499155\\VS code work\\ProductsInventory\\ProductsInventory.Api\\obj\\",
+        "outputPath": "C:\\Users\\u499155\\VS code work\\ProductsInventory\\ProductsInventory.api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\u499155\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -47,6 +47,26 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.6, )"
             }
           },
           "imports": [
