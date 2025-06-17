@@ -37,7 +37,7 @@ public class ProductService : IProductService
         return _productRepository.Get(id);
     }
 
-    public Product UpdateProduct(String id,  Product product)
+    public Product UpdateProduct(String id, Product product)
     {
         Product dbproduct = _productRepository.Get(id);
         if (dbproduct == null)
@@ -49,7 +49,7 @@ public class ProductService : IProductService
             dbproduct.Name = product.Name;
         }
 
-        Product UpdatedProduct = _productRepository.Save(dbproduct);
+        Product UpdatedProduct = _productRepository.Update(id,dbproduct);
         return UpdatedProduct;
     }
 }

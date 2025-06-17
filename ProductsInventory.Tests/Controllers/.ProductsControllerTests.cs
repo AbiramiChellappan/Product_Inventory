@@ -3,6 +3,8 @@ using ProductsInventory.api.Models;
 using ProductsInventory.api.Controllers;
 public class ProductsControllerTests
 {
+    private string id;
+
     [Fact]
     public void ProductAdd_ShouldReturnOk()
     {
@@ -20,7 +22,7 @@ public class ProductsControllerTests
     {
         // Given
         ProductsController productsController = new ProductsController();
-        var res = productsController.GetProduct();
+        var res = productsController.GetProduct(id);
         Assert.IsType<OkResult>(res);
         // When
 

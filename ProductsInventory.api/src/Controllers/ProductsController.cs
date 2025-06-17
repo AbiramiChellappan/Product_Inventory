@@ -22,6 +22,7 @@ public class ProductsController : ControllerBase
     [HttpPost]
     public ActionResult CreateProduct([FromBody] Product product)
     {
+        Product pro = _productsService.AddProduct(product);
         return Ok(product);
     }
 
@@ -32,25 +33,21 @@ public class ProductsController : ControllerBase
         return Ok(product);
     }
 
-    [HttpGet("{id}")]
+    [HttpPut("{id}")]
     public ActionResult UpdateProduct([FromBody] Product product, string id)
     {
         Product product1 = _productsService.UpdateProduct(id, product);
         return Ok(product1);
     }
 
-    [HttpGet("{id}")]
+    [HttpDelete("{id}")]
     public ActionResult DeleteProduct(string id)
     {
+        _productsService.DeleteProduct(id);
         return Ok("Product deleted sucessfully");
     }
 
-    public object GetProducts(string id)
-    {
-        Product product = _productsService.GetProduct(id);
-        return Ok(product);
-    }
-
+    [HttpGet]
     public ActionResult GetAllProducts()
     {
         List<Product> product1 = _productsService.GetAllProducts();

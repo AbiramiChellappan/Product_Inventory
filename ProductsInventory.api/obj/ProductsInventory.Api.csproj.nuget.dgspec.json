@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\u499155\\VS code work\\ProductsInventory\\ProductsInventory.api\\ProductsInventory.api.csproj": {}
+    "C:\\Users\\u499155\\VS code work\\ProductsInventory\\ProductsInventory.Api\\ProductsInventory.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\u499155\\VS code work\\ProductsInventory\\ProductsInventory.api\\ProductsInventory.api.csproj": {
+    "C:\\Users\\u499155\\VS code work\\ProductsInventory\\ProductsInventory.Api\\ProductsInventory.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\u499155\\VS code work\\ProductsInventory\\ProductsInventory.api\\ProductsInventory.api.csproj",
-        "projectName": "ProductsInventory.api",
-        "projectPath": "C:\\Users\\u499155\\VS code work\\ProductsInventory\\ProductsInventory.api\\ProductsInventory.api.csproj",
+        "projectUniqueName": "C:\\Users\\u499155\\VS code work\\ProductsInventory\\ProductsInventory.Api\\ProductsInventory.Api.csproj",
+        "projectName": "ProductsInventory.Api",
+        "projectPath": "C:\\Users\\u499155\\VS code work\\ProductsInventory\\ProductsInventory.Api\\ProductsInventory.Api.csproj",
         "packagesPath": "C:\\Users\\u499155\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\u499155\\VS code work\\ProductsInventory\\ProductsInventory.api\\obj\\",
+        "outputPath": "C:\\Users\\u499155\\VS code work\\ProductsInventory\\ProductsInventory.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\u499155\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -44,6 +44,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.2.3, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.5, )"

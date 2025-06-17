@@ -1,39 +1,48 @@
 using ProductsInventory.api.Models;
+using ProductsInventory.Api.Data;
 
 namespace ProductsInventory.api.Repositories;
 
 public class ProductRepository : IProductRepository
 {
-    private List<Product> products;
-    public ProductRepository()
+    // private List<Product> products;
+    public ApplicationDbContext _context;
+    public ProductRepository(ApplicationDbContext applicationDbContext)
     {
-        products = new List<Product>();
+        _context = applicationDbContext;
     }
     public Product Get(string id)
     {
-        var product = products.Find(product => product.ID == id);
+        // var product = _context.products.Find(product => product.ID == id);
+        Product product = _context.products.Find(id);
         return product;
     }
 
     public List<Product> GetAll()
     {
-        return products;
+        return _context.products.ToList<Product>();
     }
 
     public void Remove(string id)
     {
-        var product = products.Find(product => product.ID == id);
-        products.Remove(product);
+        // var product = _context.products.Find(product => product.ID == id);
+        Product product = _context.products.Find(id);
+        // product.Remove(product);
+        _context.products.Remove(product);
+        _context.SaveChanges();
     }
 
     public Product Save(Product product)
     {
-        products.Add(product);
+        _context.products.Add(product);
+        _context.SaveChanges();
         return product;
     }
 
-    public Product Update(Product product)
+    public Product Update(string id, Product product)
     {
-        throw new NotImplementedException();
+        _context.products.Update(product);
+        _context.SaveChanges();
+        return product;
     }
 }

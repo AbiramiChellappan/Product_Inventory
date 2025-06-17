@@ -1,20 +1,34 @@
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
+using Microsoft.EntityFrameworkCore;
 namespace ProductsInventory.api.Models;
 
+[Table("Products")]
 public class Product
 {
-    public string ID { get; set; }
-    public string Name { get; set; }
-    public int Quantity { get; set; }
-    public double Price { get; set; }
+    [Key]
+    public Guid ID { get; set; }
+    [MaxLength(50)]
+    [Required]
+    public required string Name { get; set; }
+    public int? Quantity { get; set; }
+    
+    [Precision(6, 2)]
+    public double? Price { get; set; }
 
-
+    [JsonConverter(typeof(JsonStringEnumConverter))]
+    public List<CategoryAttribute>?Categories{ get; set; }
+    [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+    public DateTimeOffset CreatedAt { get; } = DateTimeOffset.UtcNow;
     public Product()
     {
-        ID = "123";
-        Name = "unknown";
+        // ID = "123";
+        // Name = "unknown";
     }
 
-    public Product(string id, string name, int quantity, double price)
+    public Product(Guid id, string name, int quantity, double price)
     {
         ID = id;
         Name = name;
